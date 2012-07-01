@@ -32,18 +32,18 @@
 %%% ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 %%% POSSIBILITY OF SUCH DAMAGE.
 
-%% @doc The venerable and ancient computer game of FLIP.
+%% This is an implementation of the venerable and ancient game of Flip,
+%% by by John S. James, which first appeared in the March/April 1977 edition
+%% of Creative Computing.
 %%
-%% <p>This version is coded in Erlang.  It is based on the
-%% original game of FLIP by John S. James, as implemented in
-%% BASIC by Steve North in <i>Creative Computing</i>, March/April 1977.</p>
-%%
-%% @end
+%% This implementaion is based largely on the version written in BASIC by
+%% Steve North appearing in "More BASIC Computer Games", Ed. David H. Ahl
+%% (ISBN 0-89480-137-6).
 
 -module(flip).
 -vsn('2002.0731').
--author('catseye@catseye.mb.ca').
--copyright('Copyright (c)2002 Cat`s Eye Technologies. All rights reserved.').
+-author('cpressey@gmail.com').
+-copyright('Copyright (c)2002-2012 Chris Pressey, Cat`s Eye Technologies. All rights reserved.').
 
 -export([start/0]).
 
@@ -67,9 +67,6 @@ get_guess() ->
 compute_z2(Z1, F2) when Z1 < 0.5 -> Z1 * F2 + 1 * (1 - F2);
 compute_z2(Z1, F2) when Z1 > 0.5 -> Z1 * F2 + 0 * (1 - F2);
 compute_z2(Z1, F2) -> random:uniform().
-
-%% @spec start() -> ok
-%% @doc Plays a game of FLIP.
 
 start() ->
   {H,M,S} = time(),                                % this seems to be an adequate way to

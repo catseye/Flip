@@ -11,9 +11,22 @@ What makes it interesting is that the coin is not fair.  The computer tries
 to find patterns in your guesses, and exploit them by biasing the coin toss
 away from what it thinks you are likely to guess next.
 
-You can think of it as creating a Markov chain to model your guesses, and
-updating it each time you make a guess, based on your last few guesses.
+This is interesting because humans are actually not all that good at moving
+randomly; we tend to and fall into patterns.  So a pigeon, not thinking
+about the game and pecking haphazardly at "heads" and "tails" buttons, might
+actually be a better Flip player than you or me.
+
+You can think of the program as creating a Markov chain to model your
+guesses, and updating it each time you make a guess, based on your last few
+guesses.  Although, it's not quite that straightforward -- there is some
+randomness thrown in, too.
 
 This version of the game is written in Erlang, based largely on the version
 written in BASIC by Steve North appearing in *More BASIC Computer Games*,
-Ed. David H. Ahl (ISBN 0-89480-137-6).
+Ed. David H. Ahl (ISBN 0-89480-137-6).  Note that in this implementation,
+heads and tails are called `Y` and `N`.
+
+Running
+-------
+
+Start an Erlang shell, load the `flip` module, and run `flip:start()`.
