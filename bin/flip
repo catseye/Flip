@@ -1,0 +1,2 @@
+#!/bin/sh
+ERL_LIBS=`dirname $0`/../../ erl -noshell -run flip -run init stop
