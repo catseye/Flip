@@ -46,3 +46,9 @@ guess that the flip was heads, or 'N' to guess that the flip was tails.
 A correct guess will be signalled by an asterisk printed before the
 next question mark.  At the end of the run (by default 50 flips,) your
 score will be printed.
+
+License
+-------
+
+This work is in the public domain.  See the file `UNLICENSE` for more
+information.
